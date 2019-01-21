@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_add_city"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context="com.fanxing.fxweather2.AddCityActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/add_city_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/gray"
+        app:titleTextColor="@android:color/white">
+
+        <ImageButton
+            android:id="@+id/ib_toolbar_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_boolbar_out" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="添加城市"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <ImageButton
+            android:id="@+id/ib_toolbar_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/ic_boolbar_location" />
+    </android.support.v7.widget.Toolbar>
+
+    <EditText
+        android:id="@+id/et_search"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/juxing"
+        android:gravity="center"
+        android:hint="搜索城市"
+        android:imeOptions="actionSearch"
+        android:singleLine="true"
+        android:textColor="#ff666666"
+        android:textColorHint="#ff979797"
+        android:textCursorDrawable="@drawable/color_cursor" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+        <View
+            android:layout_marginLeft="30dp"
+            android:layout_width="4dp"
+            android:layout_gravity="center_vertical"
+            android:background="@color/gray"
+            android:layout_height="10dp"/>
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/tv_lvTitle"
+            android:layout_marginLeft="6dp"
+            android:textColor="#ff757575"
+            android:text="热门城市"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_city"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@android:color/transparent"
+        android:scrollbars="none">
+
+    </ListView>
+</LinearLayout>

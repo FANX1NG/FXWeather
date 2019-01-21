@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item android:title="首页" android:id="@+id/mn_mian" android:checked="true" android:icon="@drawable/icon_100"/>
+        <item android:title="管理城市" android:id="@+id/mn_city" android:checked="false" android:icon="@drawable/icon_100n"/>
+
+    </group>
+
+</menu>

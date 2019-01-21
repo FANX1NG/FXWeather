@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/weather_forecast"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view_forecast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="18dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="4dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="6dp"
+        app:contentPadding="14dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="未来六天预报"
+                style="@style/forecasttext"
+                android:textSize="12sp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:id="@+id/ll_forecastTop"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:gravity="center"
+                        android:text="max℃"
+                        android:textColor="#3c5f81"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="min℃"
+                        android:textColor="#3c5f81"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="日期"
+                        android:textColor="#3c5f81"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center"
+                        android:text="天气"
+                        android:textColor="#3c5f81"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_max1"
+                        style="@style/forecasttext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="12" />
+
+                    <TextView
+                        android:id="@+id/tv_min1"
+                        style="@style/forecasttext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="12" />
+
+                    <TextView
+                        android:id="@+id/tv_date1"
+                        style="@style/forecasttext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="今天" />
+
+                    <ImageView
+                        android:id="@+id/iv_cond1"
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:layout_marginTop="8dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/icon_100" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_max2"
+                        style="@style/forecasttext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="12" />
+
+                    <TextView
+                        android:id="@+id/tv_min2"
+                        style="@style/forecasttext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="12" />
+
+                    <TextView
+                        android:id="@+id/tv_date2"
+                        style="@style/forecasttext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="今天" />
+
+                    <ImageView
+                        android:id="@+id/iv_cond2"
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:layout_marginTop="8dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/icon_100" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_max3"
+                        style="@style/forecasttext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="12" />
+
+                    <TextView
+                        android:id="@+id/tv_min3"
+                        style="@style/forecasttext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="12" />
+
+                    <TextView
+                        android:id="@+id/tv_date3"
+                        style="@style/forecasttext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="今天" />
+
+                    <ImageView
+                        android:id="@+id/iv_cond3"
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:layout_marginTop="8dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/icon_100" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_max4"
+                        style="@style/forecasttext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="12" />
+
+                    <TextView
+                        android:id="@+id/tv_min4"
+                        style="@style/forecasttext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="12" />
+
+                    <TextView
+                        android:id="@+id/tv_date4"
+                        style="@style/forecasttext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="今天" />
+
+                    <ImageView
+                        android:id="@+id/iv_cond4"
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:layout_marginTop="8dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/icon_100" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_max5"
+                        style="@style/forecasttext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="12" />
+
+                    <TextView
+                        android:id="@+id/tv_min5"
+                        style="@style/forecasttext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="12" />
+
+                    <TextView
+                        android:id="@+id/tv_date5"
+                        style="@style/forecasttext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="今天" />
+
+                    <ImageView
+                        android:id="@+id/iv_cond5"
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:layout_marginTop="8dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/icon_100" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_max6"
+                        style="@style/forecasttext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="12" />
+
+                    <TextView
+                        android:id="@+id/tv_min6"
+                        style="@style/forecasttext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="12" />
+
+                    <TextView
+                        android:id="@+id/tv_date6"
+                        style="@style/forecasttext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="今天" />
+
+                    <ImageView
+                        android:id="@+id/iv_cond6"
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:layout_marginTop="8dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/icon_100" />
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#3c5f81" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="center"
+                android:text="降水概率"
+                android:textColor="#3c5f81"
+                android:textSize="12sp" />
+            <LinearLayout
+                android:layout_marginTop="6dp"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:scaleType="fitCenter"
+
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tv_pop1"
+                    style="@style/forecasttext"
+                    android:text="20%"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tv_pop2"
+                    style="@style/forecasttext"
+                    android:text="20%"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tv_pop3"
+                    style="@style/forecasttext"
+                    android:text="20%"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tv_pop4"
+                    style="@style/forecasttext"
+                    android:text="20%"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tv_pop5"
+                    style="@style/forecasttext"
+                    android:text="20%"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tv_pop6"
+                    style="@style/forecasttext"
+                    android:text="20%"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+</RelativeLayout>
