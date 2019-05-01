@@ -1,8 +1,11 @@
 package com.fanxing.fxweather2;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
@@ -42,16 +45,35 @@ public class CityManagerActivity extends AppCompatActivity {
         //初始化数据
         intiData();
         //删除数据监听
-        lvCityManager.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        lvCityManager.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                db.delete("city","cid=?", new String[]{((TextView)view.findViewById(R.id.tv_city_cid)).getText().toString()});
-                paths.remove(i);
-                adapter.updateList(paths);
+            public boolean onItemLongClick(AdapterView<?> adapterView,final View view,final int i, long l) {
+                new AlertDialog.Builder(CityManagerActivity.this).setTitle("城市删除提示").setMessage("确认删除"+((TextView)view.findViewById(R.id.tv_cityt)).getText().toString()+"?")
+
+                        .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                db.delete("city","cid=?", new String[]{((TextView)view.findViewById(R.id.tv_city_cid)).getText().toString()});
+                                paths.remove(i);
+                                adapter.updateList(paths);
 //                Toast.makeText(CityManagerActivity.this, ""+i+"     "+view.toString(), Toast.LENGTH_SHORT).show();
 
+
+                            }})
+                        .setNegativeButton("取消",null)
+                        .show();
+                return false;
             }
         });
+//        lvCityManager.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+//                db.delete("city","cid=?", new String[]{((TextView)view.findViewById(R.id.tv_city_cid)).getText().toString()});
+//                paths.remove(i);
+//                adapter.updateList(paths);
+////                Toast.makeText(CityManagerActivity.this, ""+i+"     "+view.toString(), Toast.LENGTH_SHORT).show();
+//
+//            }
+//        });
         delData();
     }
 

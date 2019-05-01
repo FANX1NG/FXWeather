@@ -47,15 +47,7 @@
                 android:layout_alignLeft="@id/tv_city_cid"
                 android:text="城市ID:" />
 
-            <ImageView
-                android:id="@+id/del"
-                android:layout_width="60dp"
-                android:layout_height="match_parent"
-                android:layout_alignParentRight="true"
-                android:background="@android:color/holo_red_dark"
-                android:src="@drawable/ic_del"
-                android:scaleType="center"
-                />
+
         </RelativeLayout>
 
     </android.support.v7.widget.CardView>
