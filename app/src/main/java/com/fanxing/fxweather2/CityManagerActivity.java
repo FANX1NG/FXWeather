@@ -52,29 +52,29 @@ public class CityManagerActivity extends AppCompatActivity {
         //初始化数据
         intiData();
         //删除数据监听
-        lvCityManager.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-            @Override
-            public boolean onItemLongClick(AdapterView<?> adapterView, final View view, final int i, long l) {
-                //如果编辑按钮状态为1，则可长按删除
-                if (adapter.editStatus == 1) {
-                    new AlertDialog.Builder(CityManagerActivity.this).setTitle("城市删除提示").setMessage("确认删除" + ((TextView) view.findViewById(R.id.tv_cityt)).getText().toString() + "?")
-
-                            .setPositiveButton("确定", new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int which) {
-                                    db.delete("city", "cid=?", new String[]{((TextView) view.findViewById(R.id.tv_city_cid)).getText().toString()});
-                                    paths.remove(i);
-                                    adapter.updateList(paths, false);
-//                Toast.makeText(CityManagerActivity.this, ""+i+"     "+view.toString(), Toast.LENGTH_SHORT).show();
-
-
-                                }
-                            })
-                            .setNegativeButton("取消", null)
-                            .show();
-                }
-                return false;
-            }
-        });
+//        lvCityManager.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+//            @Override
+//            public boolean onItemLongClick(AdapterView<?> adapterView, final View view, final int i, long l) {
+//                //如果编辑按钮状态为1，则可长按删除
+//                if (adapter.editStatus == 1) {
+//                    new AlertDialog.Builder(CityManagerActivity.this).setTitle("城市删除提示").setMessage("确认删除" + ((TextView) view.findViewById(R.id.tv_cityt)).getText().toString() + "?")
+//
+//                            .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+//                                public void onClick(DialogInterface dialog, int which) {
+//                                    db.delete("city", "cid=?", new String[]{((TextView) view.findViewById(R.id.tv_city_cid)).getText().toString()});
+//                                    paths.remove(i);
+//                                    adapter.updateList(paths, false);
+////                Toast.makeText(CityManagerActivity.this, ""+i+"     "+view.toString(), Toast.LENGTH_SHORT).show();
+//
+//
+//                                }
+//                            })
+//                            .setNegativeButton("取消", null)
+//                            .show();
+//                }
+//                return false;
+//            }
+//        });
 
         backActivity();
         editAndDel();
